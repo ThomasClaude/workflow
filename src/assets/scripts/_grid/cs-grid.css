@@ -1,0 +1,39 @@
+.cs-gridContainer {
+  min-height:100vh;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  pointer-events: none; /* Prevent the grid from preventing click on stuff because it's on top of it */
+
+  transition:opacity .2s ease-out;
+}
+.cs-gridColumn,
+.cs-gridGutter {
+  min-height:100vh;
+  position:relative;
+  float:left;
+  min-width:0px;
+  background: rgba(0,0,0,0.2);
+}
+
+.cs-gridGutter {
+  background: none;
+}
+
+.cs-gridButton {
+  position:fixed;
+  top:0;
+  right:0;
+  background:#aaa;
+  border:none;
+  width:50px;
+  padding:15px 0;
+  padding:3px;
+}
+.cs-gridRow {
+  outline: 1px solid green;
+  width:100%;
+  float:none;
+  opacity:.4;
+}
