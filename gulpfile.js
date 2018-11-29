@@ -47,7 +47,6 @@ gulp.task("compileSass", () =>
 	gulp.src("./src/assets/styles/scss/*.*ss")
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./dist/assets/styles/'))
-		// .pipe(gulp.dest('./src/assets/styles/css/'))
 		.pipe(connect.reload())
 
 );
@@ -92,14 +91,12 @@ gulp.task('views', function buildHTML() {
 			// Your options in here.
 		}))
 		.pipe(gulp.dest('./dist/'))
-		// .pipe(gulp.dest('./src'))
 		.pipe(connect.reload())
 });
 
 gulp.task("html", () =>
 	gulp.src("./src/*.html")
 			.pipe(gulp.dest('./dist/'))
-			// .pipe(gulp.dest('./src'))
 			.pipe(connect.reload())
 
 );

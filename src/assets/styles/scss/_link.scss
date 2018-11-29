@@ -9,7 +9,7 @@
 
 		&--header{
 
-			margin-left: 17.5%; 
+			margin-left: 17.5%;
 
 		}
 
@@ -32,7 +32,7 @@
 
 /*Position du bouton*/
 
-		.burger{ 
+		.burger{
 			z-index: 9;
 			position: fixed;
 			top: 10%;
@@ -53,7 +53,7 @@
 			box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
 			transition: all .2s $cubicBezier .7s;
 			transform-origin: center;
-			
+
 			}
 
 			&--bar{
@@ -72,7 +72,7 @@
 				width: 30px;
 				border-radius: 20px;
 				transition: all .2s $cubicBezier;
-				}	
+				}
 			}
 
 			span:nth-child(1){
@@ -93,7 +93,7 @@
 				margin-left: 5px;
 				clear: both;
 				margin-bottom: 0;
-				
+
 				transform-origin: right;
 
 			}
@@ -107,11 +107,11 @@
 			}
 
 		}
-		
-	
+
+
 		/*Style du bouton*/
-		
-		
+
+
 		.menu--name{
 
 			position: absolute;
@@ -159,7 +159,7 @@
 
 /*Variation dans les barres du menu*/
 
-		
+
 
 
 		.nav{
@@ -168,7 +168,7 @@
 
   			@include transform(translate(-50%, -50%)); /* décalage de 50% de sa propre taille */
 			z-index: 99999;
-			margin: 0 auto; 
+			margin: 0 auto;
 			padding: 0;
 			list-style: none;
 
@@ -179,7 +179,7 @@
 				visibility: hidden;
 				opacity: 0;
 				transition: all .2s $cubicBezier;
-		
+
 				transform: translate3d(0, 0, 0);
 
 				&:nth-child(1){
@@ -197,7 +197,7 @@
 				&:last-child{
 					margin-bottom: 0%;
 				}
-			
+
 				a{
 					position: relative;
 					font: 64px sans-serif;
@@ -214,5 +214,5 @@
 				}
 			}
 		}
-				
+
 
