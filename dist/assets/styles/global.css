@@ -13,12 +13,12 @@ body {
   padding: 0;
   position: relative;
   background: #FEFEFE;
-  color: #111111;
+  color: #F6293E;
   font: 18px "proxima-nova", sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 ::selection {
-  background-color: #111111;
+  background-color: #F6293E;
   color: #F6293A; }
 
 ul {
@@ -54,6 +54,9 @@ a {
 
 /* Fin du pré-set */
 /* Layout */
+body {
+  color: red; }
+
 /* Header ----------------------------------------------------*/
 header {
   height: 100vh; }
@@ -167,7 +170,7 @@ header {
     font-family: "bebas-neue";
     transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
     .btn a:hover {
-      color: #111111;
+      color: #F6293E;
       background: #F6293A; }
 
 /*Position du bouton*/
@@ -308,7 +311,7 @@ header {
       font: 64px sans-serif;
       font-weight: 900;
       text-transform: uppercase;
-      color: #111111;
+      color: #F6293A;
       text-decoration: none;
       transition: color 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
     .nav--el__actif a {

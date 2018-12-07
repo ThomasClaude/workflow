@@ -31,6 +31,7 @@ gulp.task('watch', function() {
 	gulp.watch("./src/assets/components/*.pug", ["views"])
 	gulp.watch("./src/*.html", ["html"])
 	gulp.watch("./src/assets/styles/scss/*", ["compileSass"])
+	gulp.watch("./src/assets/styles/scss/*/*", ["compileSass"])
 	gulp.watch("./src/assets/scripts/js/*.js", ["compileJs"])
 	gulp.watch("./src/assets/images/*", ["compileAssets"])
 
