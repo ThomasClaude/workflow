@@ -13,6 +13,7 @@
     "@babel/preset-env": "^7.1.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "barba.js": "^1.0.0",
     "chalk": "^2.4.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0-beta.2",

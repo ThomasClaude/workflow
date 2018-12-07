@@ -1,20 +1,31 @@
+doctype html
 html(lang='en')
   head
     block head
-    - var clientSlug = 'Workflow'
-    title #{titlePage} | #{clientSlug}
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
-    link(rel="stylesheet" type="text/css" href="assets/styles/global.css")
+      - var clientSlug = 'Workflow'
+      title #{titlePage} | #{clientSlug}
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      link(rel="stylesheet" type="text/css" href="assets/styles/global.css")
     block scripts
       //- script(src='/jquery.js')
   body
-    block header
-      header
-        p some header content
-    block content
-      main
-        p some main content
-    block footer
-      footer
-        p some footer content
+    #barba-wrapper
+      .barba-container
+        header
+          block header
+            p
+              |some header content
+        main
+          block content
+            p
+              |some main content
+        footer
+          block footer
+            p
+              |some footer content
+
+    block scripts
+      script.
+        Barba.Pjax.start();
+
