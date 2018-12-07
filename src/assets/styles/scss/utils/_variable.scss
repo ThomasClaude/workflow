@@ -1,0 +1,29 @@
+// VARIABLES
+
+
+// COLOR SCHEME
+
+
+$main-color: rgb(254, 254, 254);  //Background color
+$secondary-color:  rgb(177, 127, 74); // Usually the focal color
+$text-color: rgb(17, 17, 17);  // Scale of black
+$text-colorbis: rgb(17, 17, 17);  // Scale of white
+$gray-lightest: rgb(200, 200, 200); // Scale of grey
+
+
+// FONT STYLE
+
+$ff-alt: 'Calluna', serif;
+$ff-default: 'Montserrat', sans-serif;
+
+
+// CUBIC BEZIER
+
+$cubic-bezier: cubic-bezier(.215, .61, .355, 1);
+
+// QUERIES
+
+$s: 40rem;
+$m: 80rem;
+$l: 102.4rem;
+$xl: 128rem;

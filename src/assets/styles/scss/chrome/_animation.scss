@@ -2,12 +2,8 @@
 
 
 /*Animations du burger menu-----------------------------------------------*/
-			
-
-
-
 		.burger--open {
-			
+
 			.burger--background{
 				pointer-events: none;
 				@include transform(scale(50));
@@ -15,20 +11,22 @@
 
 			}
 
-			.burger--bar{
+			.burger--bar {
 
-				span:nth-child(1){
+				span:nth-child(1) {
 					@include transform(rotate(-45deg));
 
 				}
+
 				span:nth-child(2){
 					@include transform(translateX(100%));
 					opacity: 0;
 				}
+
 				span:nth-child(3){
 					@include transform(rotate(45deg));
 					position: relative;
-			
+
 				}
 
 			}
@@ -55,7 +53,7 @@
 				}
 
 				a:hover{
-					color: $secondaryColor;
+					color: $secondary-color;
 				}
 
 			}
@@ -66,7 +64,7 @@
 			}
 
 		}
-		
+
 
 
 
@@ -95,6 +93,6 @@
 			&.project:nth-child(2n+1) .title--project span:nth-child(3){
 				margin-left: 0;
 			}
-		}	
- 
+		}
+
 	}

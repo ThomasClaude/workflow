@@ -1,0 +1,99 @@
+/* Layout */
+
+/* Header ----------------------------------------------------*/
+
+header {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	border-bottom: 1px solid $gray-lightest;
+	overflow: hidden;
+}
+
+.header__content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.header__video {
+	margin: 5rem 0;
+	width: 100%;
+	transform-origin: center center;
+	transform: scale(2);
+
+	@media (min-width: $s) {
+		transform: scale(1);
+	}
+}
+
+.header__title {
+	color: $secondary-color;
+	font-family: $ff-alt;
+	font-style: italic;
+}
+
+.header__job__listing {
+	display: flex;
+	width: 40%;
+	margin: 0 auto;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.header__job__items {
+	position: relative;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	padding: 0 1%;
+	// margin-right: 5%;
+	color: $secondary-color;
+
+	&:last-child {
+		&::after {
+			display: none;
+		}
+	}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: .2rem;
+			height: 100%;
+			right: -3rem;
+			bottom: 0;
+			background-color: $secondary-color;
+		}
+}
+
+.header__social__listing {
+	position: absolute;
+	width: 60%;
+	left: 50%;
+	top: 90%;
+	transform: translate(-50%, -50%);
+
+	@media (min-width: $m) {
+		top: 70%
+	}
+}
+
+.header__social__items {
+	display: inline-block;
+	padding: 0 4%;
+
+	transition: transform .3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.2);
+	}
+
+	a {
+		color: $secondary-color;
+
+	}
+}

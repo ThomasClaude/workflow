@@ -1,9 +1,7 @@
-
-
-@import "_variable",
-		"_preset",
-		"_mixin",
- 		"_layout",
- 		"_title",
-		"_link",
-		"_animation";
+@import
+'./base/typography',
+'./utils/variable',
+'./utils/mixin',
+'./base/preset',
+'./chrome/header',
+'./chrome/footer'

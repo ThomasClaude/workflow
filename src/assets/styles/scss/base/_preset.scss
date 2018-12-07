@@ -1,0 +1,60 @@
+//  Preset starts
+
+html {
+	font-size: 10px;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background: $main-color;
+	color: $text-color;
+	font-family: $ff-default;
+	font-size: 1.6rem;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+::selection {
+	background-color: $text-color;
+	color: $secondary-color;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	width: 92.1875%; /* (1280 - 100) / 12,8 */
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.cf {
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.center {
+	display: block;
+	text-align: center;
+}
+
+.overflow {
+	overflow: hidden;
+}
+// Fin du pré-set
