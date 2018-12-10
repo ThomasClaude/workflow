@@ -1,3 +1,8 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-  console.info('✌️ This website was made by www.thomasclaude.be . Before copying feel free to ask if you dont understand something.✌️ ');
+/* eslint-disable max-len */
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	const authorSite = 'http://thomasclaude.be';
+
+	console.info(`✌️ This website was made by ${authorSite} ✌️ `);
 });

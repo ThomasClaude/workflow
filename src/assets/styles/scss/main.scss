@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+/*
+ * Shared data between Sass and JS
+ * auto-conversion from /gulp/breakpoints.json
+ */
+@import 'utils/breakpoints';
+
+
+/*
+ * Variables, functions, mixins, extends, helpers, …
+ */
+@import 'utils/utils';
+
+
+/*
+ * Vendor
+ */
+@import 'vendor/sass-mq/mq';
+@import 'vendor/normalize';
+
+
+/*
+ * Base
+ */
+// sass-lint:disable clean-import-paths
+@import 'base/*.scss';
+@import 'components/**/*.scss';
+// @import 'layout/*.scss';
+// sass-lint:enable clean-import-paths

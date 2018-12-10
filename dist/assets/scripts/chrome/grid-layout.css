@@ -1,0 +1,45 @@
+.grid-container {
+  min-height:100vh;
+  /* outline:1px solid #00ff30; */
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  pointer-events: none; /* Prevent the grid from preventing click on stuff because it's on top of it */
+
+  transition:opacity .2s ease-out;
+}
+.grid-column,
+.grid-gutter {
+  min-height:100vh;
+  position:relative;
+  float:left;
+  min-width:0px;
+}
+
+.grid-column {
+  background: linear-gradient(to bottom, #bfffcd 0%,#93efdd 100%);
+  opacity: .5;
+}
+
+.grid-gutter {
+  /* outline: 1px solid #ff30ff; */
+}
+
+.grid-button {
+  position:fixed;
+  top:0;
+  right:0;
+  background: linear-gradient(to right, #bfffcd 0%,#93efdd 100%);
+  border:none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  padding:15px;
+}
+.grid-row {
+  /* outline: 1px solid black; */
+  width:100%;
+  float:none;
+  opacity:.4;
+}
