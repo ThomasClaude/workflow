@@ -82,21 +82,21 @@ a {
 /* Header ----------------------------------------------------*/
 header {
   position: relative;
-  height: 100vh;
+  overflow: hidden;
   width: 100%;
-  border-bottom: 1px solid #c8c8c8;
-  overflow: hidden; }
+  height: 100vh;
+  border-bottom: 1px solid #c8c8c8; }
 
 .header__content {
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%); }
 
 .header__video {
-  margin: 5rem 0;
   width: 100%;
+  margin: 5rem 0;
   transform-origin: center center;
   transform: scale(2); }
   @media (min-width: 40rem) {
@@ -110,35 +110,35 @@ header {
 
 .header__job__listing {
   display: flex;
-  width: 40%;
-  margin: 0 auto;
+  flex-wrap: wrap;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  width: 40%;
+  margin: 0 auto; }
 
 .header__job__items {
   position: relative;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 900;
   padding: 0 1%;
-  color: #b17f4a; }
+  color: #b17f4a;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase; }
   .header__job__items:last-child::after {
     display: none; }
   .header__job__items::after {
     content: '';
-    display: block;
     position: absolute;
-    width: .2rem;
-    height: 100%;
     right: -3rem;
     bottom: 0;
+    display: block;
+    width: .2rem;
+    height: 100%;
     background-color: #b17f4a; }
 
 .header__social__listing {
   position: absolute;
-  width: 60%;
-  left: 50%;
   top: 90%;
+  left: 50%;
+  width: 60%;
   transform: translate(-50%, -50%); }
   @media (min-width: 80rem) {
     .header__social__listing {
