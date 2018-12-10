@@ -10,6 +10,8 @@ const imagemin = require('gulp-imagemin');
 const bulkSass = require('gulp-sass-bulk-import');
 const gutil = require('gulp-util');
 
+sass.compiler = require('node-sass');
+
 // Variables related to dir
 
 const srcDir = './src/';
@@ -39,8 +41,9 @@ gulp.task('watch', () => {
 	gulp.watch(`${srcDir}assets/components/*/*.pug`, ['views']);
 	gulp.watch(`${srcDir}assets/components/*`, ['views']);
 	gulp.watch(`${srcDir}*.html`, ['html']);
-	gulp.watch(`${srcDir}assets/styles/scss/*`, ['css', /* 'compileSass'*/]);
-	gulp.watch(`${srcDir}assets/styles/scss/*/*`, ['css', /*'compileSass'*/]);
+	gulp.watch(`${srcDir}assets/styles/scss/*`, ['css']);
+	gulp.watch(`${srcDir}assets/styles/scss/*/*`, ['css']);
+	gulp.watch(`${srcDir}assets/styles/scss/components/*/*`, ['css']);
 	gulp.watch(`${srcDir}assets/scripts/*.js`, ['compileJs']);
 	gulp.watch(`${srcDir}assets/scripts/*/*.js`, ['compileJs']);
 	gulp.watch(`${srcDir}assets/images/*`, ['compileAssets']);
@@ -60,6 +63,19 @@ gulp.task('compileSass', () =>
 		.pipe(gulp.dest(`${distDir}assets/styles/`))
 		.pipe(connect.reload())
 );
+
+gulp.task('css', () => {
+	gulp
+		.src(`${srcDir}assets/styles/scss/main.scss`)
+		.pipe(bulkSass())
+		.pipe(
+			sass({
+				includePaths: ['src/styles/scss/*'],
+			}))
+		.on('error', sass.logError)
+		.pipe(gulp.dest(`${distDir}assets/styles/`))
+		.pipe(connect.reload());
+});
 
 /*
  * After checking if changes has been done in the image
@@ -109,18 +125,6 @@ gulp.task('html', () =>
 		.pipe(connect.reload())
 
 );
-
-gulp.task('css', () => {
-	gulp
-		.src(`${srcDir}assets/styles/scss/main.scss`)
-		.pipe(bulkSass())
-		.pipe(
-			sass({
-				includePaths: ['src/styles/scss/'],
-			}))
-		.pipe(gulp.dest(`${distDir}assets/styles/`));
-});
-
 
 // Creating a webserver from the dist file on the 8080 port
 
