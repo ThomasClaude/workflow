@@ -80,10 +80,10 @@ header {
 	transform: translate(-50%, -50%);
 
 
-	@include mq('m') {
-		top: 70%;
+	// @include mq('m') {
+	// 	top: 70%;
 
-	}
+	// }
 }
 
 .header__social__items {
