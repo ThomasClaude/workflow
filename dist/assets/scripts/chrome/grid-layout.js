@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const gridLayout = function() {
   this.DOMGridContainer = 0;
   this.DOMGridColumns = [];

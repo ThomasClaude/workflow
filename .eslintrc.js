@@ -66,8 +66,8 @@ module.exports = {
       },
     ],
     'indent': [
-      2,
-      2,
+      1,
+      'tab',
       {
         SwitchCase: 1,
         VariableDeclarator: {
@@ -186,7 +186,7 @@ module.exports = {
     'no-script-url': 2,
     'no-self-compare': 2,
     'no-sequences': 2,
-    'no-tabs': 2,
+    'no-tabs': 0,
     'no-template-curly-in-string': 2,
     'no-throw-literal': 2,
     'no-trailing-spaces': 2,
