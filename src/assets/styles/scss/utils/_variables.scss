@@ -1,0 +1,150 @@
+/**
+ * Dev, based on $env (from gulp)
+ */
+$env: 'dev' !default;
+
+
+/**
+ * Colors
+ * for the naming use http://name-of-color.com/
+ * from darker to lighter ?
+ */
+
+// Global colors
+$black: #000;
+$white: #fff;
+$main-color: #3b0083;
+$secondary-color: #3b0083;
+$text-color: #3b0083;
+$transparent: rgba(0, 0, 0, 0);
+// Project colors
+
+// Semantic colors
+$c-dark: $black;
+$c-light: $white;
+$c-phonotech: #3b0083;
+$c-purple-lighter: #ad81ff;
+$c-purple-light: #6100db;
+$c-purple: $c-phonotech;
+$c-purple-dark: #1e0046;
+$c-gold-light: #afa17f;
+$c-gold: #86754d;
+$c-gray: #979797;
+$c-gray-darker: #626262;
+$c-gray-light: #e0e1dd;
+$gray-lightest: #e0e1dd;
+$c-red: #ff0032;
+
+// Z Layers
+$z-layers: (
+	lowest: 0,
+	lower: 10,
+	low: 20,
+	middle: 30,
+	high: 40,
+	higher: 50,
+	highest: 60,
+	infinite: 999,
+);
+
+/**
+ * Typography
+ */
+
+$base-font-size: 18px !default;
+
+$ff-default: Poppins, sans-serif;
+$ff-alt: Poppins, sans-serif;
+
+$font-sizes: (
+	h1: 3.6rem,
+	h2: 2.8rem,
+	h3: 2.4rem,
+	h4: 1.4rem
+);
+
+// The `scalable-text-map` contains options for our `scalable-text` mixin.
+// For each entry, we define a `min` map and a `max` map.
+// In this example this means:
+// - For a screen < 400px, the `h1` will be 24px.
+// - For a screen > 800px, the `h1` will be 36px.
+// - For any screen size in between, the `h1` will scale between 24px and 36px.
+$scalable-text-map: (
+	h1: (
+		min: (24px, 'small'),
+		max: (36px, 'large')
+	),
+	p: (
+		min: (13px, 'small'),
+		max: (18px, 'large')
+	)
+);
+
+
+/*
+ * Layout & spacing
+ */
+
+$spacing: 2rem;
+$wrapper-width: 140rem;
+$wrapper-width-s: 75rem;
+$wrapper-width-xxl: 144rem;
+
+$header-height: 9rem;
+$logo-width: 15rem;
+$logo-width-l: 16.5rem;
+
+// Solution
+$s-section-width: 50%;
+$s-section-min-width: 38rem;
+$s-section-max-width: 96rem;
+
+$s-header-height: 50rem;
+$s-header-height-s: 65rem;
+$s-header-height-l: 100%;
+
+$s-header-sticky-height: 30rem;
+$s-header-sticky-height-s: 40rem;
+$s-header-sticky-height-l: 100%;
+
+$s-header-offset: 10rem; // bottom white space
+$s-header-offset-s: 12rem;
+$s-header-offset-l: 0;
+
+$s-header-picture-height: 20rem;
+$s-header-picture-height-s: 30rem;
+$s-header-picture-height-l: 60rem;
+
+$s-header-picture-bottom: 3.6rem;
+$s-header-picture-bottom-s: 2.8rem;
+
+$s-header-picture-ratio: 1.3333;
+
+$s-header-picture-offset: 10rem; // image bottom 'overlap'
+$s-header-picture-offset-s: 10rem;
+$s-header-picture-offset-l: 2rem;
+
+// References
+$r-highlighted-margin: 8rem;
+$r-highlighted-headline: 10rem;
+$r-highlighted-offset: 24rem;
+$r-highlighted-nav-height: 7rem;
+$r-slider-width: 40rem;
+$r-slider-width-xl: 44rem;
+$r-gallery-controls-width: 4rem;
+$r-gallery-controls-height: 4rem;
+$r-gallery-controls-offset: .5rem;
+$r-gallery-pagination-width: 4.5rem;
+
+// Applications
+$a-nav-width: 27rem;
+$a-picture-width: 60%;
+$a-highlight-h: 30rem;
+$a-picture-h-l: 28rem;
+$a-picture-h-xl: 36rem;
+$a-picture-h-xxl: 40rem;
+/**
+ * RWD
+ */
+$mq-responsive: true;
+$mq-static-breakpoint: 'large';

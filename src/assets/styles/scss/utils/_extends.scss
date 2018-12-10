@@ -2,14 +2,6 @@
  * Helpers
  */
 
-
-/*
- * To use this you only need to write
- * @extend the the %name of the style
- * you want to extend
-*/
-
-
 /*
  * Clearfix: contain floats
  * http://cssmojo.com/latest_new_clearfix_so_far/
@@ -19,7 +11,7 @@
 		content: '';
 		display: table;
 		clear: both;
-  }
+	}
 }
 
 /*
@@ -27,7 +19,7 @@
  * http://juicystudio.com/article/screen-readers-display-none.php
  */
 %hidden {
-	display: none !important; //sass-lint:disable-line no-important
+	display: none !important; // sass-lint:disable-line no-important
 	visibility: hidden;
 }
 
@@ -145,21 +137,21 @@
 /*
  * Colors
  */
-// %color-white {
-// 	color: $white;
-// }
+%color-white {
+	color: $white;
+}
 
-// %color-black {
-// 	color: $black;
-// }
+%color-black {
+	color: $black;
+}
 
-// %color-dark {
-// 	color: $c-dark;
-// }
+%color-dark {
+	color: $c-dark;
+}
 
-// %color-light {
-// 	color: $c-light;
-// }
+%color-light {
+	color: $c-light;
+}
 
 /*
  * Reset Buttons

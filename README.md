@@ -3,7 +3,7 @@
 - Client: __ThomasClaude__
 - Project: __Workflow__
 - Type: __website__
-- Version: __1.0.0__
+- Version: __2.0.0__
 
 ## Getting started
 
@@ -18,6 +18,7 @@
 
 ## Tasks
 
-+ `gulp`
-    * Copy + process all files
-    * Start watching + browsersync
++`gulp`
+
+- Copy + process all files
+- Start watching + browsersync

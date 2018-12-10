@@ -7,7 +7,13 @@ const babel = require('gulp-babel');
 const pug = require('gulp-pug');
 const chalk = require('chalk');
 const imagemin = require('gulp-imagemin');
+const bulkSass = require('gulp-sass-bulk-import');
+const gutil = require('gulp-util');
 
+// Variables related to dir
+
+const srcDir = './src/';
+const distDir = './dist/';
 
 /*
  * With this gulp file you are able to
@@ -29,15 +35,15 @@ gulp.task('hello', () => {
 // Live reload, watching all files and if change call another gulp task.
 
 gulp.task('watch', () => {
-	gulp.watch('./src/views/*.pug', ['views']);
-	gulp.watch('./src/assets/components/*/*.pug', ['views']);
-	gulp.watch('./src/assets/components/*', ['views']);
-	gulp.watch('./src/*.html', ['html']);
-	gulp.watch('./src/assets/styles/scss/*', ['compileSass']);
-	gulp.watch('./src/assets/styles/scss/*/*', ['compileSass']);
-	gulp.watch('./src/assets/scripts/*.js', ['compileJs']);
-	gulp.watch('./src/assets/scripts/*/*.js', ['compileJs']);
-	gulp.watch('./src/assets/images/*', ['compileAssets']);
+	gulp.watch(`${srcDir}views/*.pug`, ['views']);
+	gulp.watch(`${srcDir}assets/components/*/*.pug`, ['views']);
+	gulp.watch(`${srcDir}assets/components/*`, ['views']);
+	gulp.watch(`${srcDir}*.html`, ['html']);
+	gulp.watch(`${srcDir}assets/styles/scss/*`, ['css', /* 'compileSass'*/]);
+	gulp.watch(`${srcDir}assets/styles/scss/*/*`, ['css', /*'compileSass'*/]);
+	gulp.watch(`${srcDir}assets/scripts/*.js`, ['compileJs']);
+	gulp.watch(`${srcDir}assets/scripts/*/*.js`, ['compileJs']);
+	gulp.watch(`${srcDir}assets/images/*`, ['compileAssets']);
 });
 
 
@@ -49,9 +55,9 @@ gulp.task('watch', () => {
  */
 
 gulp.task('compileSass', () =>
-	gulp.src('./src/assets/styles/scss/*.*ss')
+	gulp.src(`${srcDir}assets/styles/scss/*.*ss`)
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./dist/assets/styles/'))
+		.pipe(gulp.dest(`${distDir}assets/styles/`))
 		.pipe(connect.reload())
 );
 
@@ -61,13 +67,13 @@ gulp.task('compileSass', () =>
  */
 
 gulp.task('compileAssets', () =>
-	gulp.src('./src/assets/images/*')
+	gulp.src(`${srcDir}assets/images/*`)
 		.pipe(imagemin([
 			imagemin.svgo({ plugins: [{ removeViewBox: true }] }),
 		], {
 			verbose: true,
 		}))
-		.pipe(gulp.dest('./dist/assets/images'))
+		.pipe(gulp.dest(`${distDir}assets/images`))
 		.pipe(connect.reload())
 );
 
@@ -78,9 +84,9 @@ gulp.task('compileAssets', () =>
  */
 
 gulp.task('compileJs', () =>
-	gulp.src('./src/assets/scripts/*.js')
+	gulp.src(`${srcDir}assets/scripts/*.js`)
 		.pipe(babel())
-		.pipe(gulp.dest('./dist/assets/scripts/'))
+		.pipe(gulp.dest(`${distDir}assets/scripts/`))
 		.pipe(connect.reload())
 );
 
@@ -90,20 +96,31 @@ gulp.task('compileJs', () =>
  */
 
 gulp.task('views', () => {
-	gulp.src('./src/views/*.pug')
-		.pipe(pug({
-		// Your options in here.
-		}))
-		.pipe(gulp.dest('./dist/'))
+	gulp.src(`${srcDir}views/*.pug`)
+		.pipe(pug())
+		.on('error', gutil.log)
+		.pipe(gulp.dest(distDir))
 		.pipe(connect.reload());
 });
 
 gulp.task('html', () =>
-	gulp.src('./src/*.html')
-		.pipe(gulp.dest('./dist/'))
+	gulp.src(`${srcDir}*.html`)
+		.pipe(gulp.dest(distDir))
 		.pipe(connect.reload())
 
 );
+
+gulp.task('css', () => {
+	gulp
+		.src(`${srcDir}assets/styles/scss/main.scss`)
+		.pipe(bulkSass())
+		.pipe(
+			sass({
+				includePaths: ['src/styles/scss/'],
+			}))
+		.pipe(gulp.dest(`${distDir}assets/styles/`));
+});
+
 
 // Creating a webserver from the dist file on the 8080 port
 
@@ -116,3 +133,5 @@ gulp.task('connect', () => {
 });
 
 gulp.task('default', ['hello', 'connect', 'watch']);
+
+

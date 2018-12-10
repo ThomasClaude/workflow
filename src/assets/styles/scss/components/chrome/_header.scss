@@ -24,9 +24,12 @@ header {
 	transform-origin: center center;
 	transform: scale(2);
 
-	@media (min-width: $s) {
-		transform: scale(1);
-	}
+
+
+	// @include mq('s') {
+	// 	transform: scale(1);
+
+	// }
 }
 
 .header__title {
@@ -76,8 +79,10 @@ header {
 	width: 60%;
 	transform: translate(-50%, -50%);
 
-	@media (min-width: $m) {
+
+	@include mq('m') {
 		top: 70%;
+
 	}
 }
 

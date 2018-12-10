@@ -1,0 +1,38 @@
+//Avoid typekit FOUT
+html {
+	&.js {
+		opacity: 0;
+		transition: opacity .2s ease-in-out;
+
+		&.wf-active,
+		&.wf-inactive,
+		&.ready {
+			opacity: 1;
+		}
+	}
+
+	&.is-locked {
+		position: fixed;
+		overflow: hidden;
+		width: 100%;
+		height: 110%;
+
+	}
+}
+
+body {
+	// Scrollbars for Internet Explorer
+	scrollbar-face-color: $c-purple-lighter;
+	scrollbar-track-color: $c-purple;
+}
+
+// SVG sprite
+body > svg {
+	display: none;
+}
+
+// RWD
+img {
+	max-width: 100%;
+	height: auto;
+}
