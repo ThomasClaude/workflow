@@ -34,23 +34,23 @@ html {
   font-size: 10px; }
 
 body {
-  -webkit-font-smoothing: antialiased;
+  position: relative;
+  margin: 0;
+  padding: 0;
   background: #fefefe;
   color: #111111;
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  margin: 0;
-  padding: 0;
-  position: relative; }
+  -webkit-font-smoothing: antialiased; }
 
 ::selection {
   background-color: #111111;
   color: #b17f4a; }
 
 ul {
-  list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 a {
   text-decoration: none; }

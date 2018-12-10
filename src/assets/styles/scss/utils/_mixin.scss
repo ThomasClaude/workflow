@@ -1,10 +1,11 @@
+// sass-lint:disable no-vendor-prefixes
 
-@mixin transform($transform){
-  -webkit-transform: $transform;
-     -moz-transform: $transform;
-      -ms-transform: $transform;
-       -o-transform: $transform;
-          transform: $transform;
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
 }
 
 
