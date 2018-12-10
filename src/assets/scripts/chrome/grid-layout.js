@@ -1,4 +1,6 @@
-const gridLayout = function() {
+/* eslint-disable */
+
+const GridLayout = function() {
   this.DOMGridContainer = 0;
   this.DOMGridColumns = [];
   this.DOMGridGutters = [];
@@ -6,11 +8,11 @@ const gridLayout = function() {
 
   this.DOMGridButton = document.createElement("button");
   this.bActive = true;
+};
 
-}
+// Global Variables
+const createGrid = new GridLayout();
 
-//Global Variables
-const createGrid = new gridLayout();
 
 function setGridLayout( object ) {
 
@@ -48,8 +50,10 @@ function setGridLayout( object ) {
       createGrid.DOMGridRows[i].style.height = object.gridRowHeight+object.gridRowUnit;
       createGrid.DOMGridContainer.appendChild(createGrid.DOMGridRows[i]);
     }
-  }
-  //Checks if there needs to start active/inactive
+	}
+
+	// Checks if there needs to start active/inactive
+
   createGrid.bActive = object.activateGrid;
   if(createGrid.bActive == true) {gp
     createGrid.DOMGridContainer.style.opacity = 1;
