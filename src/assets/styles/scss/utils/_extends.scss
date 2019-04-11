@@ -7,11 +7,11 @@
  * http://cssmojo.com/latest_new_clearfix_so_far/
  */
 %cf {
-	&::after {
-		content: '';
-		display: table;
-		clear: both;
-	}
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 /*
@@ -19,8 +19,8 @@
  * http://juicystudio.com/article/screen-readers-display-none.php
  */
 %hidden {
-	display: none !important; // sass-lint:disable-line no-important
-	visibility: hidden;
+  display: none !important; // sass-lint:disable-line no-important
+  visibility: hidden;
 }
 
 /*
@@ -28,14 +28,14 @@
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 %visually-hidden {
-	position: absolute;
-	overflow: hidden;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
 }
 
 
@@ -43,55 +43,55 @@
  * Typo
  */
 %text-left {
-	text-align: left;
+  text-align: left;
 }
 
 %text-center {
-	text-align: center;
+  text-align: center;
 }
 
 %text-right {
-	text-align: right;
+  text-align: right;
 }
 
 %text-justify {
-	text-align: justify;
+  text-align: justify;
 }
 
 %text-uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 %text-notransform {
-	text-transform: none;
+  text-transform: none;
 }
 
 %text-nodecoration {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 %ff-default {
-	font-family: $ff-default;
+  font-family: $ff-default;
 }
 
 %fw-bold {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 %fw-semibold {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 %fw-normal {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 %fw-light {
-	font-weight: 100;
+  font-weight: 100;
 }
 
 %fs-italic {
-	font-style: italic;
+  font-style: italic;
 }
 
 
@@ -99,69 +99,69 @@
 // Resets
 // -----------------------------------------------------------------------------
 %button-nostyle {
-	display: inline-block;
-	margin: 0;
-	border: 0 none;
-	padding: 0;
-	outline: none;
-	background: none;
-	border-radius: 0;
-	-webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
-	appearance: none;
-	cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  outline: none;
+  background: none;
+  border-radius: 0;
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  appearance: none;
+  cursor: pointer;
 }
 
 
 %select-nostyle {
-	display: inline-block;
-	margin: 0;
-	border: 0 none;
-	padding: 0;
-	outline: none;
-	background: none;
-	border-radius: 0;
-	-webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
-	-moz-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  display: inline-block;
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  outline: none;
+  background: none;
+  border-radius: 0;
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  -moz-appearance: none; // sass-lint:disable-line no-vendor-prefixes
 
-	&::-ms-expand { // sass-lint:disable-line no-vendor-prefixes
-		display: none;
-	}
+  &::-ms-expand { // sass-lint:disable-line no-vendor-prefixes
+    display: none;
+  }
 }
 
 %list-nostyle {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 /*
  * Colors
  */
 %color-white {
-	color: $white;
+  color: $white;
 }
 
 %color-black {
-	color: $black;
+  color: $black;
 }
 
 %color-dark {
-	color: $c-dark;
+  color: $c-dark;
 }
 
 %color-light {
-	color: $c-light;
+  color: $c-light;
 }
 
 /*
  * Reset Buttons
  */
 %reset-button {
-	display: inline-block;
-	margin: 0;
-	border: 0 none;
-	padding: 0;
-	outline: none;
-	background: none;
-	cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }

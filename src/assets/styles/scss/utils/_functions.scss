@@ -4,10 +4,10 @@
 // @param {Number} $number - Number to remove unit from
 // @return {Number} - Unitless number
 @function strip-unit($number) {
-	@if type-of($number) == 'number' and not unitless($number) {
-		@return $number / ($number * 0 + 1);
-	}
-	@return $number;
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
 }
 
 
@@ -16,7 +16,7 @@
 // @param {String} $unit - Unit to append to number
 /// @return {Number} - Number with unit
 @function convert-unit($number, $unit) {
-	@return unquote(strip-unit($number) + $unit);
+  @return unquote(strip-unit($number) + $unit);
 }
 
 
@@ -24,7 +24,7 @@
 // @param {Number} $target - Target size
 // @param {Number} $context - Context size
 @function calc-ratio($target, $context) {
-	@return strip-unit($target / $context);
+  @return strip-unit($target / $context);
 }
 
 
@@ -32,11 +32,11 @@
 // @param {Number} $target - Target size
 // @param {Number} $context - Context size
 @function calc-percent($target, $context) {
-	@return percentage(calc-ratio($target, $context));
+  @return percentage(calc-ratio($target, $context));
 }
 
 @function get-font-size($tag) {
-	@return map-get($font-sizes, $tag);
+  @return map-get($font-sizes, $tag);
 }
 
 
@@ -45,7 +45,7 @@
 // @param {Number} $number - The px value
 // @return {Number} - The rem value
 @function rem($number) {
-	@return convert-unit((strip-unit($number) / strip-unit($base-font-size)), 'rem');
+  @return convert-unit((strip-unit($number) / strip-unit($base-font-size)), 'rem');
 }
 
 
@@ -53,7 +53,7 @@
 // Basically we devide the Photoshop value by 1000 to get the correct CSS value.
 // @param {Number} $number - The Photoshop letter-spacing value
 @function ls($number) {
-	@return strip-unit($number) / 1000;
+  @return strip-unit($number) / 1000;
 }
 
 
@@ -63,40 +63,40 @@
 // @param {String | Number} $breakpoint
 // @return {Number}
 @function valid-breakpoint($breakpoint) {
-	$type: type-of($breakpoint);
-	@if $type == 'string' {
-		@if variable-exists(mq-breakpoints) {
-			@if map-get($mq-breakpoints, $breakpoint) {
-				@return map-get($mq-breakpoints, $breakpoint);
-			} @else {
-				@warn 'Undefined breakpoint value.';
-				@return false;
-			}
-		} @else {
-			@warn 'No breakpoints map defined.';
-			@return false;
-		}
-	} @else if $type == 'number' {
-		@return $breakpoint;
-	} @else {
-		@warn 'Unknown type of breakpoint value.';
-		@return false;
-	}
+  $type: type-of($breakpoint);
+  @if $type == 'string' {
+    @if variable-exists(mq-breakpoints) {
+      @if map-get($mq-breakpoints, $breakpoint) {
+        @return map-get($mq-breakpoints, $breakpoint);
+      } @else {
+        @warn 'Undefined breakpoint value.';
+        @return false;
+      }
+    } @else {
+      @warn 'No breakpoints map defined.';
+      @return false;
+    }
+  } @else if $type == 'number' {
+    @return $breakpoint;
+  } @else {
+    @warn 'Unknown type of breakpoint value.';
+    @return false;
+  }
 }
 
 // Get z-layer value from map
 // See the `$z-layers` map in `_variables.scss` for more informations.
 // @param {String} key - The key to use to get the value
 @function layer($key) {
-	@if variable-exists(z-layers) {
-		@if map-has-key($z-layers, $key) == true {
-			@return map-get($z-layers, $key);
-		} @else {
-			@warn 'Unknown `z-layers` key: ' + $key;
-			@return auto;
-		}
-	} @else {
-		@warn 'Undefined variables `$z-layers`';
-		@return auto;
-	}
+  @if variable-exists(z-layers) {
+    @if map-has-key($z-layers, $key) == true {
+      @return map-get($z-layers, $key);
+    } @else {
+      @warn 'Unknown `z-layers` key: ' + $key;
+      @return auto;
+    }
+  } @else {
+    @warn 'Undefined variables `$z-layers`';
+    @return auto;
+  }
 }

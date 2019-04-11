@@ -8,20 +8,20 @@
 /// @example scss - Scrollbar styling
 ///	 @include scrollbars(.5em, slategray);
 @mixin scrollbars($size: 6px, $foreground-color: $black, $background-color: $white) {
-	// sass-lint:disable-block no-vendor-prefixes
-	// For Google Chrome
-	&::-webkit-scrollbar {
-		position: absolute;
-		width: $size;
-	}
+  // sass-lint:disable-block no-vendor-prefixes
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    position: absolute;
+    width: $size;
+  }
 
-	&::-webkit-scrollbar-thumb {
-		background: $foreground-color;
-	}
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
 
-	&::-webkit-scrollbar-track {
-		background: $background-color;
-	}
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
 }
 
 // Scalable Text:
@@ -34,109 +34,109 @@
 //	@include scalable-text('h1');
 // }
 @mixin scalable-text($key) {
-	$map: map-get($scalable-text-map, $key);
+  $map: map-get($scalable-text-map, $key);
 
-	$min: map-get($map, 'min');
-	$max: map-get($map, 'max');
+  $min: map-get($map, 'min');
+  $max: map-get($map, 'max');
 
-	$font-min-size: nth($min, 1);
-	$font-max-size: nth($max, 1);
+  $font-min-size: nth($min, 1);
+  $font-max-size: nth($max, 1);
 
-	$font-min-break: valid-breakpoint(nth($min, 2));
-	$font-max-break: valid-breakpoint(nth($max, 2));
+  $font-min-break: valid-breakpoint(nth($min, 2));
+  $font-max-break: valid-breakpoint(nth($max, 2));
 
-	font-size: calc(#{$font-min-size} + (#{strip-unit($font-max-size)} - #{strip-unit($font-min-size)}) * ((100vw - #{$font-min-break}) / (#{strip-unit($font-max-break)} - #{strip-unit($font-min-break)}))); // sass-lint:disable-line max-line-length
+  font-size: calc(#{$font-min-size} + (#{strip-unit($font-max-size)} - #{strip-unit($font-min-size)}) * ((100vw - #{$font-min-break}) / (#{strip-unit($font-max-break)} - #{strip-unit($font-min-break)}))); // sass-lint:disable-line max-line-length
 
-	@include mq($until: $font-min-break) {
-		font-size: $font-min-size;
-	}
-	@include mq($from: $font-max-break) {
-		font-size: $font-max-size;
-	}
+  @include mq($until: $font-min-break) {
+    font-size: $font-min-size;
+  }
+  @include mq($from: $font-max-break) {
+    font-size: $font-max-size;
+  }
 }
 
 @mixin center-x {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @mixin center-y {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @mixin center-xy {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin get-all-space {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @mixin aspect-ratio($width, $height) {
-	position: relative;
+  position: relative;
 
-	&::before {
-		content: '';
-		display: block;
-		width: 100%;
-		padding-top: ($height / $width) * 100%;
-	}
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
 
-	> * {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
+  > * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 @mixin object-fit($fit: cover, $position: null) {
-	object-fit: $fit;
+  object-fit: $fit;
 
-	@if $position {
-		font-family: 'object-fit: #{$fit}; object-position: #{$position}';
-		object-position: $position;
-	} @else {
-		font-family: 'object-fit: #{$fit}';
-	}
+  @if $position {
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+    object-position: $position;
+  } @else {
+    font-family: 'object-fit: #{$fit}';
+  }
 }
 
 @mixin image-fit($fit: cover, $position: null) {
-	@include get-all-space;
-	@include object-fit($fit, $position);
+  @include get-all-space;
+  @include object-fit($fit, $position);
 }
 
 @mixin owl($margin: false) {
-	> :first-child {
-		margin-top: 0;
+  > :first-child {
+    margin-top: 0;
 
-		@if $margin {
-			margin-bottom: $margin;
-		}
-	}
+    @if $margin {
+      margin-bottom: $margin;
+    }
+  }
 
-	> :last-child {
-		margin-bottom: 0;
-	}
+  > :last-child {
+    margin-bottom: 0;
+  }
 
-	> * + * {
-		margin-top: 0;
+  > * + * {
+    margin-top: 0;
 
-		@if $margin {
-			margin-bottom: $margin;
-		}
-	}
+    @if $margin {
+      margin-bottom: $margin;
+    }
+  }
 }

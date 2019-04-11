@@ -1,15 +1,15 @@
 .wrapper,
 [class*='wrapper--'] {
-	max-width: $wrapper-width;
-	margin: 0 auto;
+  max-width: $wrapper-width;
+  margin: 0 auto;
 }
 
 [class*='wrapper--'][class*='--small'] {
-	max-width: $wrapper-width-s;
-	margin: 0 auto;
+  max-width: $wrapper-width-s;
+  margin: 0 auto;
 }
 
 [class*='wrapper--'][class*='--xxl'] {
-	max-width: $wrapper-width-xxl;
-	margin: 0 auto;
+  max-width: $wrapper-width-xxl;
+  margin: 0 auto;
 }

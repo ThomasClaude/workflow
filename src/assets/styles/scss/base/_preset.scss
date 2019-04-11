@@ -3,60 +3,60 @@
 // sass-lint:disable no-vendor-prefixes
 
 html {
-	font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-	position: relative;
-	margin: 0;
-	padding: 0;
-	background: $main-color;
-	color: $text-color;
-	font-family: $ff-default;
-	font-size: 1.6rem;
-	-webkit-font-smoothing: antialiased;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: $main-color;
+  color: $text-color;
+  font-family: $ff-default;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-	background-color: $text-color;
-	color: $secondary-color;
+  background-color: $text-color;
+  color: $secondary-color;
 }
 
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-	position: relative;
-	width: 92.1875%; /* (1280 - 100) / 12,8 */
-	max-width: 1080px;
-	margin: 0 auto;
+  position: relative;
+  width: 92.1875%; /* (1280 - 100) / 12,8 */
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .cf {
-	clear: both;
+  clear: both;
 }
 
 .fl {
-	float: left;
+  float: left;
 }
 
 .fr {
-	float: right;
+  float: right;
 }
 
 .center {
-	display: block;
-	text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .overflow {
-	overflow: hidden;
+  overflow: hidden;
 }
 // Fin du pré-set

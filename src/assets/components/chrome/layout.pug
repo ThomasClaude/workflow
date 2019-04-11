@@ -1,40 +1,40 @@
 html(lang='en')
-	head
-		block head
-		- var clientSlug = 'Workflow'
-		title #{titlePage} | #{clientSlug}
-		meta(charset='UTF-8')
-		meta(name='viewport' content='width=device-width, initial-scale=1')
-		link(rel="stylesheet" type="text/css" href="assets/styles/main.css")
-		link(rel="stylesheet" type="text/css" href="assets/scripts/chrome/grid-layout.css")
-		block scripts
-		script(src='assets/scripts/main.js')
-	body
-		#barba-wrapper
-			.barba-container
-				//- Header Components
-				include ./header.pug
+  head
+    block head
+    - var clientSlug = 'Workflow'
+    title #{titlePage} | #{clientSlug}
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel="stylesheet" type="text/css" href="assets/styles/main.css")
+    link(rel="stylesheet" type="text/css" href="assets/scripts/chrome/grid-layout.css")
+    block scripts
+    script(src='assets/scripts/main.js')
+  body
+    #barba-wrapper
+      .barba-container
+        //- Header Components
+        include ./header.pug
 
-				main
-					block content
-						p
-							|some main content
+        main
+          block content
+            p
+              |some main content
 
-				//- Footer Components
-				include ./footer.pug
+        //- Footer Components
+        include ./footer.pug
 
-		block scripts
-		script(src="assets/scripts/chrome/grid-layout.js")
+    block scripts
+    script(src="assets/scripts/chrome/grid-layout.js")
 
-		script.
-			var myGrid = {
-				gridWidthUnit: "vw",
-				gridWidth: 85,
-				gridGutterWidthUnit: "vw",
-				gridColumnNumber: 12,
-				gridGutterWidth: 2,
-				activateGrid: false
-			};
+    script.
+      var myGrid = {
+        gridWidthUnit: "vw",
+        gridWidth: 85,
+        gridGutterWidthUnit: "vw",
+        gridColumnNumber: 12,
+        gridGutterWidth: 2,
+        activateGrid: false
+      };
 
-			setGridLayout(myGrid);
+      setGridLayout(myGrid);
 

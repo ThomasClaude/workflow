@@ -1,47 +1,47 @@
 //sass-lint:disable no-important
 
 /*html*/.lock-scroll {
-	&,
-	body {
-		overflow-x: hidden;
-	}
+  &,
+  body {
+    overflow-x: hidden;
+  }
 }
 
 // Miscellaneous useful HTML classes
 .h-pull-left {
-	float: left !important;
+  float: left !important;
 }
 
 .h-pull-right {
-	float: right !important;
+  float: right !important;
 }
 
 .h-text-left {
-	text-align: left !important;
+  text-align: left !important;
 }
 
 .h-text-right {
-	text-align: right !important;
+  text-align: right !important;
 }
 
 .h-text-center {
-	text-align: center !important;
+  text-align: center !important;
 }
 
 .h-text-justify {
-	text-align: justify !important;
+  text-align: justify !important;
 }
 
 .h-text-uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .h-text-notransform {
-	text-transform: none;
+  text-transform: none;
 }
 
 .h-text-nodecoration {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /*
@@ -49,8 +49,8 @@
  * http://juicystudio.com/article/screen-readers-display-none.php
  */
 .h-hidden {
-	display: none !important;
-	visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 /*
@@ -58,31 +58,31 @@
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 .h-visually-hidden {
-	position: absolute;
-	overflow: hidden;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
 
-	/*
-	 * Extends the .visuallyhidden class to allow the element
-	 * to be focusable when navigated to via the keyboard:
-	 * https://www.drupal.org/node/897638
-	 */
-	&.is-focusable {
-		&:active,
-		&:focus {
-			position: static;
-			overflow: visible;
-			width: auto;
-			height: auto;
-			margin: 0;
-			clip: auto;
-		}
-	}
+  /*
+   * Extends the .visuallyhidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+  &.is-focusable {
+    &:active,
+    &:focus {
+      position: static;
+      overflow: visible;
+      width: auto;
+      height: auto;
+      margin: 0;
+      clip: auto;
+    }
+  }
 }
 
 /*
@@ -90,27 +90,27 @@
  * http://cssmojo.com/latest_new_clearfix_so_far/
  */
 .h-clearfix {
-	&::after {
-		content: '';
-		display: table;
-		clear: both;
-	}
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 .h-inline-block {
-	display: inline-block !important;
+  display: inline-block !important;
 }
 
 .h-table {
-	display: table !important;
+  display: table !important;
 }
 
 .h-cell {
-	display: table-cell !important;
+  display: table-cell !important;
 }
 
 .h-va-middle {
-	vertical-align: middle !important;
+  vertical-align: middle !important;
 }
 
 /**
@@ -121,13 +121,13 @@
  * Browser support for hyphenation: http://caniuse.com/#search=hyphenation
  */
 .h-text-hyphenate {
-	word-wrap: break-word;
-	hyphens: auto;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /**
  * Prevent line breaks
  */
 .h-nobr {
-	white-space: nowrap;
+  white-space: nowrap;
 }

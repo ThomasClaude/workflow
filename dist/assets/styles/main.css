@@ -104,10 +104,10 @@
   padding: 0;
   clip: rect(0 0 0 0);
   /*
-	 * Extends the .visuallyhidden class to allow the element
-	 * to be focusable when navigated to via the keyboard:
-	 * https://www.drupal.org/node/897638
-	 */ }
+   * Extends the .visuallyhidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */ }
   .h-visually-hidden.is-focusable:active, .h-visually-hidden.is-focusable:focus {
     position: static;
     overflow: visible;
@@ -525,10 +525,7 @@ html.js {
     opacity: 1; }
 
 html.is-locked {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 110%; }
+  overflow: hidden; }
 
 body {
   scrollbar-face-color: #222;
