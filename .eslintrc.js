@@ -66,8 +66,7 @@ module.exports = {
       },
     ],
     'indent': [
-      1,
-      'tab',
+      2,
       {
         SwitchCase: 1,
         VariableDeclarator: {
