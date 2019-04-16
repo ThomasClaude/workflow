@@ -101,7 +101,9 @@ gulp.task('compileAssets', () =>
 
 gulp.task('compileJs', () =>
   gulp.src(`${srcDir}assets/scripts/*.js`)
-    .pipe(babel())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(gulp.dest(`${distDir}assets/scripts/`))
     .pipe(connect.reload())
 );

@@ -1,5 +1,7 @@
 "use strict";
 
+var _gsap = require("gsap");
+
 /* eslint-disable max-len */
 var Barba = require('barba.js');
 
