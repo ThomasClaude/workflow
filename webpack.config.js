@@ -58,6 +58,6 @@ module.exports = {
   devServer: {
     // Setting devServer
     contentBase: path.resolve(__dirname, 'dist'),
-    port: 3000,
+    port: 3333,
   },
 };
