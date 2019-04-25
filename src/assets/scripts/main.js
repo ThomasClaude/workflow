@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
-const Barba = require('barba.js');
+// import styles from '../styles/scss/main.scss'
+import { TweenMax } from 'gsap';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const authorSite = 'http://thomasclaude.be';
 
   console.info(`✌️ This website was made by ${authorSite} ✌️ `);
-
-  Barba.Pjax.start();
 });
