@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 const Barba = require('barba.js');
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,14 +1,15 @@
 /* eslint-disable max-len */
 
-const gulp = require('gulp');
-const connect = require('gulp-connect');
-const sass = require('gulp-sass');
-const babel = require('gulp-babel');
-const pug = require('gulp-pug');
-const chalk = require('chalk');
-const imagemin = require('gulp-imagemin');
-const bulkSass = require('gulp-sass-bulk-import');
-const gutil = require('gulp-util');
+import gulp from 'gulp';
+import connect from 'gulp-connect';
+import sass from 'gulp-sass';
+import babel from 'gulp-babel';
+import pug from 'gulp-pug';
+import chalk from 'chalk';
+import imagemin from 'gulp-imagemin';
+import bulkSass from 'gulp-sass-bulk-import';
+import gutil from 'gulp-util';
+import browserify from 'gulp-browserify';
 
 sass.compiler = require('node-sass');
 
@@ -101,8 +102,9 @@ gulp.task('compileAssets', () =>
 
 gulp.task('compileJs', () =>
   gulp.src(`${srcDir}assets/scripts/*.js`)
-    .pipe(babel({
-      presets: ['@babel/env']
+    .pipe(browserify({
+      insertGlobals : true,
+      debug : !gulp.env.production,
     }))
     .pipe(gulp.dest(`${distDir}assets/scripts/`))
     .pipe(connect.reload())
